@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+
+body{
+    background-color: #006630;
+    color: white;
+}
+
+
+.container{
+    position: relative;
+    background-color: #24ab63;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   margin: 40px 700px;
+    gap: 30px;
+
+
+}
+
+h2{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    
+}
+
+
+#resetBtn{
+    padding: 15px 20px;
+    background-color: white;
+    color: #24ab63;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.gameArea{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 30px;
+    background-image: url(c);
+
+}
+
+.card{
+    color: black;
+    background-color: white;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s;
+
+
+}
+.card::after{
+    display: none;
+    position: absolute;
+    inset: 0;
+    background-color: #006630;
+    backface-visibility: hidden;
+
+}
+
+.ifUncorrect{
+    width: 100px;
+    height: 100px;
+}
+
+.ifUncorrect > img{
+
+    display: none;
+}
+
+.card-img{
+    width: 80px;
+    height: 80px;
+    border: 0;
+    display: block;
+    user-select: none;
+}
+
+
+.cardFinded{
+    
+}
+
+
+
+.cardOpened{
+    transform: rotateY(180deg);
+}
+
+
+.cardOpened::after, .cardFinded::after{
+    transform: rotateY(180deg);
+}
